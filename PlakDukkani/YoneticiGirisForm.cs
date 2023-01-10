@@ -13,7 +13,7 @@ namespace Album
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if(db.Yoneticiler.Where(x => x.KullaniciAdi == txtKullaniciAdi.Text.Trim()).Any() && db.Yoneticiler.Where(x => x.Sifre == txtSifre.Text.Trim()).Any())
+            if(db.Yoneticiler.Where(x => x.KullaniciAdi == txtKullaniciAdi.Text.Trim() && x.Sifre == txtSifre.Text.Trim()).Any())
             {
                 MessageBox.Show("Giriþ Yapýldý");
                 lblKullaniciAdi.Visible = false;
