@@ -27,6 +27,12 @@ namespace PlakDukkani
         {
             Yonetici yonetici = new Yonetici();
 
+            if(txtKullaniciAdi.Text.Trim() == "")
+            {
+                MessageBox.Show("Kullanıcı adı bölümü boş bırakılamaz.");
+                return;
+            }
+
             if (_db.Yoneticiler.Where(x => x.KullaniciAdi == txtKullaniciAdi.Text.Trim()).Any())
             {
                 MessageBox.Show("Lütfen başka bir kullanıcı adı giriniz.");
