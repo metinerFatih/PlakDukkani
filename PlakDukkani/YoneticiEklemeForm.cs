@@ -56,7 +56,7 @@ namespace PlakDukkani
                     ozel++;
             }
 
-            if (txtSifre.Text.Trim().Count() < 7 || buyuk < 2 || kucuk < 3 || ozel < 2)
+            if (txtSifre.Text.Trim().Count() <= 7 || buyuk < 2 || kucuk < 3 || ozel < 2)
             {
                 MessageBox.Show("Şifreniz oluşturulamadı tekrar deneyiniz.\nŞifre kuralları:\r\n• En az 8 karakter uzunluğunda olmalıdır.\r\n• En az 2 büyük harf içermelidir.\r\n• En az 3 küçük harf içermelidir.\r\n• ! (ünlem), : (iki nokta üst üste), +(artı), *(yıldız) karakterlerinden en az 2 tanesini içermelidir. (Aynı karakterden birden fazla olabilir)");
 
